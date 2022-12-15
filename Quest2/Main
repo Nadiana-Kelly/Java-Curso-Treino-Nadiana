@@ -1,0 +1,129 @@
+import java.util.Scanner;
+import java.util.Arrays; // para ordenar os números
+class Main {
+
+  public static void main(String[] args) {
+
+    Scanner input = new Scanner (System.in);
+    String opc1 = "Crescente";
+    String opc2 = "Decrescente";
+    int n = 4;
+    int y;
+    String ordem;
+    int[] numeros = new int[n];
+
+    System.out.print("\n");
+    // recebendo numeros do usuário
+    System.out.print("Números: ");
+    for(y = 0; y<4; y++){
+        numeros[y]=input.nextInt();
+    }
+
+    System.out.print("\n");
+    // recebendo a opção de ordem
+    System.out.print("Ordem de exibição: ");
+    ordem = input.next();
+
+    System.out.println("\n");
+
+      if(opc1.equals(ordem) == true){
+        
+          Arrays.sort(numeros); // ordenando de forma crescente os números
+
+          //exibindo números na ordem crescente
+          System.out.print("Exibindo números ordenados: ");
+            
+          for(y = 0; y<4; y++){
+              System.out.print(numeros[y] + ",");
+          }
+
+          System.out.println("\n");
+          
+          int contagemI  = 0 ; // variável contadora de impares
+          int contagemP  = 0 ; // variável contadora de pares
+
+          //contando a quantidade de numeros pares
+          for(y = 0; y<n; y++){
+              if(numeros[y] %2 == 0){
+                  contagemP= contagemP + 1;
+              }
+          }
+          System.out.print("Quantidade de Números Pares: " + contagemP);
+          
+          System.out.println("\n");
+         //mostrando numeros pares
+          System.out.print("Exibindo números Pares: ");
+          for(y = 0; y<n; y++){
+              if(numeros[y] %2 == 0){
+                   System.out.print(numeros[y] + ",");
+              }
+          }
+        System.out.println("\n");
+        //contando a quantidade de numeros ímpares
+          for(y = 0; y<4; y++){
+              if(numeros[y] %2 != 0){
+                  contagemI= contagemI + 1;
+              }
+          }
+          System.out.print("Quantidade de Números Ímpares: " + contagemI);
+          System.out.println("\n");
+         //mostrando numeros ímpares
+          System.out.print("Exibindo números Ímpares: ");
+          for(y = 0; y<4; y++){
+              if(numeros[y] %2 != 0){
+                   System.out.print(numeros[y] + ",");
+              }
+          }
+        
+      }else if(opc2.equals(ordem) == true){
+          
+          Arrays.sort(numeros); // ordenando de forma crescente os números
+
+          //exibindo números na ordem crescente
+          System.out.print("Exibindo números ordenados: ");
+            
+          for(y = n-1; y>=0; y--){
+              System.out.print(numeros[y] + ",");
+          }
+
+          System.out.println("\n");
+          
+          int contagemI  = 0 ; // variável contadora de impares
+          int contagemP  = 0 ; // variável contadora de pares
+
+          //contando a quantidade de numeros pares
+          for(y = 0; y<n; y++){
+              if(numeros[y] %2 == 0){
+                  contagemP= contagemP + 1;
+              }
+          }
+          System.out.print("Quantidade de Números Pares: " + contagemP);
+          
+          System.out.println("\n");
+         //mostrando numeros pares
+          System.out.print("Exibindo números Pares: ");
+          for(y = n-1; y>=0; y--){
+              if(numeros[y] %2 == 0){
+                   System.out.print(numeros[y] + ",");
+              }
+          }
+        System.out.println("\n");
+        //contando a quantidade de numeros ímpares
+          for(y = 0; y<4; y++){
+              if(numeros[y] %2 != 0){
+                  contagemI= contagemI + 1;
+              }
+          }
+          System.out.print("Quantidade de Números Ímpares: " + contagemI);
+          System.out.println("\n");
+         //mostrando numeros ímpares
+          System.out.print("Exibindo números Ímpares: ");
+          for(y = n-1; y>=0; y--){
+              if(numeros[y] %2 != 0){
+                   System.out.print(numeros[y] + ",");
+              }
+          }
+     }
+    
+  }
+}
