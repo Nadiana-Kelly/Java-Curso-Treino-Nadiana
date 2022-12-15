@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Main {
+
+  public static void main(String[] args) {
+
+    Scanner input = new Scanner (System.in);
+ 
+    String texto;
+    // recebe o texto do usuário
+    System.out.print("\n");
+    System.out.print("Texto: ");
+
+    //utilizando o "Line" pra pegar tudo até o usuário dar um 'enter'
+    texto = input.nextLine();
+    System.out.print("\n");
+      
+    //contando a quantidade de caracteres desconsiderando os espaços
+    int palavra_sem_espacos = texto.replaceAll(" ", "").length();
+
+    //apresentando informações na tela 
+    System.out.println("Quantidade de caracteres: " + palavra_sem_espacos + "\n");
+    System.out.print("\n");
+    System.out.println("1º caractere: " + texto.charAt(0));
+    System.out.println("Último caractere: " + texto.charAt(palavra_sem_espacos));
+      
+  }
+}
