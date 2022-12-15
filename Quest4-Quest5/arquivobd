@@ -1,0 +1,59 @@
+//4º questão
+TABELAS:
+SC_CAD.TBL_ATN -> Tabela de Atendimento.P
+SC_CAD.TBL_MNF -> Tabela de Manifestante.Q
+SC_CAD.TBL_APA -> Tabela de Assunto.R
+SC_CAD.TBL_CLA -> Tabela de Classificação.S
+
+DADOS QUE ELE QUER:
+- P.CodigoAtendimento, 
+- P.DataInclusaoAtendimento, 
+- Q.NomeManifestante, 
+- R.NomeAssunto, 
+- S.NomeClassificacaoAtendimento,
+
+CONDIÇÃO:
+retorne como resultado todos os chamados cadastrados no
+período de 10 fevereiro de 2020 a 15 de fevereiro de 2020
+
+código:
+
+SELECT 
+	P.CodigoAtendimento, 
+	P.DataInclusaoAtendimento, 
+	Q.NomeManifestante, 
+	R.NomeAssunto, 
+	S.NomeClassificacaoAtendimento
+FROM
+	SC_CAD.TBL_ATN P 
+	INNER JOIN SC_CAD.TBL_MNF Q on P.DataInclusaoAtendimento = Q.DataInclusaoAtendimento
+	INNER JOIN SC_CAD.TBL_APA R on Q.DataInclusaoAtendimento = R.DataInclusaoAtendimento
+	INNER JOIN SC_CAD.TBL_CLA S on R.DataInclusaoAtendimento = S.DataInclusaoAtendimento
+
+WHERE
+	P.DataInclusaoAtendimento BETWEEN '2020/10/02' AND '2020/10/15' ORDER BY P.DataInclusaoAtendimento DESC
+  
+  
+ //5º questão
+TABELAS USADAS: 
+SC_CAD.TBL_ATN -> Tabela de Atendimento - P
+SC_CAD.TBL_APA -> Tabela de Assunto - Q
+SC_CAD.TBL_CLA -> Tabela de Classificação - R
+
+DADOS QUE ELE QUER:
+- NomeAssunto
+- NomeClassificação
+- Quantidade
+
+*FINGIR QUE TEM ALGUM DADO CHAMADO ID
+* FINGIR QUE TEM UM CAMPO DE DATA
+ORDEM:
+Deverá ordenar por Nome Classificação e Assunto Crescente
+
+SELECT
+	Q.NomeAssunto, R.NomeClassificação, P.Quantidade 
+FROM
+	SC_CAD.TBL_ATN P INNER JOIN SC_CAD.TBL_APA Q on P.ID = Q.ID
+	SC_CAD.TBL_APA Q INNER SC_CAD.TBL_CLA R on Q.ID = R.ID	
+WHERE
+	DATA BETWEEN '2020/06/01' AND '2020/06/30' ORDER BY R.NomeClassificação ASC
