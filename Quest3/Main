@@ -1,10 +1,31 @@
 import java.util.Scanner;
 import java.util.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.ZonedDateTime;
+import java.time.Instant;
+import java.text.DateFormat;
+import java.text.ParseException;
 
 class Main {
-	  public static Calendar somar_data(Calendar data) {    
+	  public static LocalDate obter_data() {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Digite a data no formato dd/MM/yyyy: ");
+			
+			String dt = scanner.nextLine();
+
+		  	// Parseio a data baseado-se num formato específico
+			LocalDate ld  = LocalDate.parse(dt, 
+            DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+		  	return ld;
+	  }
+
+	  public static LocalDate somar_data(LocalDate data) {    
 		    // pegando o dia atual
-			int dia = data.get(Calendar.DAY_OF_MONTH);
+			int dia = data.getDayOfMonth();
+		  
 		  
 		  	int soma_dos_dias = 0;
 		  
@@ -15,12 +36,16 @@ class Main {
 			}
 
 		  	// somando à data atual, a soma dos números do dia
-		  	data.add(Calendar.DATE, soma_dos_dias);
+		  	data = data.plusDays(soma_dos_dias);
 		  	return data;
 	  }
-		
+	
 	  public static void main(String[] args) {
-		  	Calendar c = somar_data(Calendar.getInstance());
-        	System.out.println("A data hoje eh: " + c.get(Calendar.DAY_OF_MONTH));
+		  	LocalDate data_alterada = somar_data(obter_data());
+
+			DateTimeFormatter formatters = DateTimeFormatter.ofPattern("d/MM/uuuu");
+			String data_alterada_s = data_alterada.format(formatters);
+
+			System.out.println("Nova Data: " + data_alterada_s);
 	  }
 }
