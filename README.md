@@ -1,4 +1,4 @@
-### Java-Treino-Quests
+### Treino linguagem Java
 - Quest1: conta caracteres 
 - Quest2: ordem crescente e decrescente 
 - Quest3: trabalha com data 
