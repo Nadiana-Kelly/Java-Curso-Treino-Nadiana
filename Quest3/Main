@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.*;
+
+class Main {
+	  public static Calendar somar_data(Calendar data) {    
+		    // pegando o dia atual
+			int dia = data.get(Calendar.DAY_OF_MONTH);
+		  
+		  	int soma_dos_dias = 0;
+		  
+		  	// soma os digitos do dia atual
+		    while(dia > 0) {
+				soma_dos_dias += dia%10;
+				dia = dia/10;
+			}
+
+		  	// somando à data atual, a soma dos números do dia
+		  	data.add(Calendar.DATE, soma_dos_dias);
+		  	return data;
+	  }
+		
+	  public static void main(String[] args) {
+		  	Calendar c = somar_data(Calendar.getInstance());
+        	System.out.println("A data hoje eh: " + c.get(Calendar.DAY_OF_MONTH));
+	  }
+}
