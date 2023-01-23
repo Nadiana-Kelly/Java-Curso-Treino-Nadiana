@@ -11,7 +11,8 @@ import java.text.ParseException;
 class Main {
 	  public static LocalDate obter_data() {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Digite a data no formato dd/MM/yyyy: ");
+            System.out.println("\n");
+			System.out.print("Data de referencia: ");
 			
 			String dt = scanner.nextLine();
 
