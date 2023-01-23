@@ -9,7 +9,7 @@ import java.time.LocalDate;
 class Main {
 	  public static LocalDate obter_data() {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Digite a data no formato dd-MM-yyyy: ");
+			System.out.print("Data de referencia: ");
 			
 			String dt = scanner.nextLine();
 
@@ -21,13 +21,14 @@ class Main {
 	  }
 	
 	  public static void main(String[] args) {
+            System.out.println("\n ");
 			LocalDate  data = obter_data();
 		  
-		    System.out.println("Digite o dia de vencimento: ");
+		    System.out.print("Digite o dia de vencimento: ");
 		  	Scanner scanner = new Scanner(System.in);
 		  	int dia_vencimento = scanner.nextInt();
 		  
-			System.out.println("Digite a quantidade de dias de corte: ");
+			System.out.print("Digite a quantidade de dias de corte: ");
 		  	int dias_corte = scanner.nextInt();
 
 		  	// obtenho o dia atual
@@ -51,7 +52,9 @@ class Main {
 				int dia  = data_vencimento.getDayOfMonth();
 				int mes  = data_vencimento.getMonthValue();
 				int ano  = data_vencimento.getYear();
-				
+
+                System.out.println("\n ");
+                
 				System.out.println("Data de Vencimento: " + dia + "/" + mes + "/" + ano);
 
 				dia  = dia_apuracao.getDayOfMonth();
