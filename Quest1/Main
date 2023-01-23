@@ -18,10 +18,9 @@ class Main {
     int palavra_sem_espacos = texto.replaceAll(" ", "").length();
 
     //apresentando informações na tela 
-    System.out.println("Quantidade de caracteres: " + palavra_sem_espacos + "\n");
-    System.out.print("\n");
+    System.out.println("Quantidade de caracteres: " + palavra_sem_espacos );
     System.out.println("1º caractere: " + texto.charAt(0));
-    System.out.println("Último caractere: " + texto.charAt(palavra_sem_espacos));
+    System.out.println("Último caractere: " + texto.charAt(palavra_sem_espacos-1));
       
   }
 }
