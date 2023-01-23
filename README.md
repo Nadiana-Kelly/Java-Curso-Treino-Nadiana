@@ -13,14 +13,14 @@
 - Questão 3: 
   Implementar um programa que receba como parâmetro de entrada uma data. Com
   essa informação, o método deverá pegar os números que compõem o dia e somar. O
-  resultado da soma deverá adicionar na quantidade de dias da data informada
+  resultado da soma deverá adicionar na quantidade de dias da data informada.
   
 - Questão 4: 
   Implementar um programa que receba como parâmetro de entrada as seguintes
   informações: data de referência, dia de vencimento e quantidade de dias de corte.
   Com essas informações, o método deverá retornar a data de vencimento e a data de
   apuração baseado nos parâmetros de entrada. Os parâmetros de entrada deverão
-  ser solicitados do usuário
+  ser solicitados do usuário.
  
  ## IMAGENS DAS QUESTÕES
  
