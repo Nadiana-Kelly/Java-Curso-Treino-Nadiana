@@ -22,7 +22,7 @@
   apuração baseado nos parâmetros de entrada. Os parâmetros de entrada deverão
   ser solicitados do usuário.
  
- ## IMAGENS DAS QUESTÕES
+ ## Imagens das questões
  
  - QUESTÃO 1
  
