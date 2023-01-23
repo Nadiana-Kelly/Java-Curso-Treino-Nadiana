@@ -1,4 +1,4 @@
-### Prova Prática de Java
+### Prática de Java
 
 - Questão 1: 
   Implementar um programa que receba como parâmetro de entrada 1 (um) texto e
